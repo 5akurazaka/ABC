@@ -1,2 +1,2 @@
 # ABC
-AtCoder Beginner Contest
+practicing coding and Algorithm by AtCoder Beginner Contest
