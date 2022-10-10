@@ -1,17 +1,24 @@
-S = [[] for x in range(10)]
-A, B, C, D = -1, -1, -1, -1
+S = ["" for x in range(10)]
+A, B, C, D = 10, 10, 1, 10
 
 for i in range(10):
-    s = input()
-    if("#" in s):
-        
-    else:
-        if(A >= 0):
-            B = i
-            break
+    S[i] = input()
 
-print(str(A+1) + '' + str(B))
-print(str(C+1) + '' + str(D+1))
+for i in range(10):
+    if("#" in S[i]):
+        A = min(A, i + 1)
+        if("." in S[i]):
+            for j in range(10):
+                if(S[i][j] == "#"):
+                    C = j + 1
+                    break
+            for j in range(9, -1, -1):
+                if(S[i][j] == "#"):
+                    D = j + 1
+                    break
+    if ((A < 10) & ("#" not in S[i])):
+        B = min(B, i)
+        break
 
-
-        
+print(A, B)
+print(C, D)
