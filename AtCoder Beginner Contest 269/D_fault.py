@@ -1,3 +1,4 @@
+#修正済み
 N = int(input())
 coordinate = []
 for i in range(N):
@@ -19,7 +20,7 @@ for cor in coordinate:
         if(cor in ans[ansGroup]):
             inList.append(ansGroup)
     if(len(inList) == 0):
-        ans[len(ans.keys())] = syuhenSet(cor[0], cor[1])
+        ans[max(ans.keys()) + 1] = syuhenSet(cor[0], cor[1])
     else:
         unionSet = syuhenSet(cor[0], cor[1])
         for i in inList:
